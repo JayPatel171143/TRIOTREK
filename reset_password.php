@@ -1,6 +1,6 @@
 <?php
 // Include database connection
-include('db.php');
+include(__DIR__ . '/includes/db.php');
 
 // Set timezone to IST
 date_default_timezone_set('Asia/Kolkata');

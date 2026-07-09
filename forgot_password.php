@@ -8,7 +8,7 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 // Include database connection
-require 'db.php';
+require __DIR__ . '/includes/db.php';
 
 // Initialize variables
 $success = $error = "";

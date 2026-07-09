@@ -1,6 +1,6 @@
 <?php 
 // Include the database connection
-include('db.php');
+include(__DIR__ . '/includes/db.php');
 
 // Create table if it doesn't exist
 $tableCreationQuery = "CREATE TABLE IF NOT EXISTS users (
@@ -217,7 +217,7 @@ $conn->close();
     <div class="container">
         <!-- Left Side Image -->
         <div class="left-image">
-            <img src="logo.jpg" alt="Join TrioTrek">
+            <img src="assets/logo.jpg" alt="Join TrioTrek">
         </div>
 
         <!-- Registration Form -->

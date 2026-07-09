@@ -1,6 +1,6 @@
 <?php 
 // Include the database connection
-include('db.php');
+include(__DIR__ . '/includes/db.php');
 
 // Initialize variables to hold error or success messages
 $success = $error = "";
@@ -31,13 +31,13 @@ if (isset($_POST['submit'])) {
 
             // Redirect based on role
             if ($_SESSION['role'] == 'admin') {
-                header("Location: admin_dashboard.php");
+                header("Location: admin/admin_dashboard.php");
                 exit;
             } elseif ($_SESSION['role'] == 'teacher') {
-                header("Location: teacher_dashboard.php");
+                header("Location: user/teacher_dashboard.php");
                 exit;
             } else {
-                header("Location: user_dashboard.php");
+                header("Location: user/user_dashboard.php");
                 exit;
             }
         } else {
@@ -206,7 +206,7 @@ $conn->close();
     <div class="container">
         <!-- Left Side Image -->
         <div class="left-image">
-            <img src="logo.jpg" alt="Welcome to TrioTrek">
+            <img src="assets/logo.jpg" alt="Welcome to TrioTrek">
         </div>
 
         <!-- Login Form -->

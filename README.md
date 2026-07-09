@@ -59,17 +59,31 @@ Based on repository analysis:
 
 ## 📂 Project Structure
 
-Typical structure in this repository:
-
 ```text
 TRIOTREK/
-├── TrioTrek/        # Main project files (PHP, HTML, CSS, images)
-├── PHPMailer/       # PHPMailer library
-├── uploads/         # Uploaded documents and files
+├── admin/           # Admin-only dashboards and management pages
+├── user/            # Student/teacher/user-facing dashboards and flows
+├── includes/        # Shared PHP includes (DB connection)
+├── assets/          # Shared static assets (CSS/images)
+├── uploads/         # Uploaded documents/files (kept as-is)
+├── login.php        # Main login entry point
+├── register.php     # Registration entry point
+├── forgot_password.php / reset_password.php
 └── README.md
 ```
 
-> Update this section if your current folder names differ.
+### Entry points
+
+- Public landing page: `index.html`
+- Authentication: `login.php`
+- Admin dashboard: `admin/admin_dashboard.php`
+- Teacher dashboard: `user/teacher_dashboard.php`
+- Student dashboard: `user/user_dashboard.php`
+
+### Migration compatibility
+
+- Legacy top-level PHP routes are kept as lightweight compatibility stubs that load files from `admin/` or `user/`.
+- Shared DB include moved from `db.php` to `includes/db.php`.
 
 ---
 
@@ -105,7 +119,7 @@ git clone https://github.com/JayPatel171143/TRIOTREK.git
 
 4. **Configure database connection**
 
-- Open `db.php` (or relevant config file)
+- Open `includes/db.php`
 - Update database host, username, password, and DB name
 
 5. **Start services**
