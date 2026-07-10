@@ -31,10 +31,10 @@ if (isset($_POST['submit'])) {
 
             // Redirect based on role
             if ($_SESSION['role'] == 'admin') {
-                header("Location: admin_dashboard.php");
+                header("Location: admin/admin_dashboard.php");
                 exit;
             } elseif ($_SESSION['role'] == 'teacher') {
-                header("Location: teacher_dashboard.php");
+                header("Location: teacher/teacher_dashboard.php");
                 exit;
             } else {
                 header("Location: user_dashboard.php");

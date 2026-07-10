@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 
     <div class="menu-bar">
-        <a href="admin_dashboard.php">Dashboard</a>
+        <a href="admin/admin_dashboard.php">Dashboard</a>
         <a href="logout.php">Logout</a>
     </div>
 

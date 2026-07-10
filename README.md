@@ -63,9 +63,12 @@ Typical structure in this repository:
 
 ```text
 TRIOTREK/
-├── TrioTrek/        # Main project files (PHP, HTML, CSS, images)
-├── PHPMailer/       # PHPMailer library
+├── admin/           # Admin panel pages
+├── teacher/         # Teacher panel pages
+├── student/         # Student panel pages
 ├── uploads/         # Uploaded documents and files
+├── db.php           # Shared database connection
+├── login.php        # Shared login page
 └── README.md
 ```
 
@@ -115,7 +118,7 @@ git clone https://github.com/JayPatel171143/TRIOTREK.git
 6. **Run in browser**
 
 ```text
-http://localhost/TRIOTREK/TrioTrek
+http://localhost/TRIOTREK/
 ```
 
 (Adjust URL based on your folder structure.)
